@@ -1,0 +1,60 @@
+.home{
+    height: calc(100vh - 4rem);
+    width: auto;
+    max-width: 55rem;
+    margin: 0 2rem;
+    overflow: hidden;
+}
+.bg{
+    position: absolute;
+    top: 6rem;
+    right: 0rem;
+    z-index: -1;
+    object-fit: cover;
+    height: 90vh;
+    width: 50vh;
+}
+.text{
+        display: flex;
+        flex-direction: column;
+        font-size: 3rem;
+        justify-content: center;
+        font-weight: 700;
+        margin-top: 8rem;
+        font-family: 'Times New Roman', Times, serif;
+}
+.hello{
+    font-size: 1.7rem;
+    font-weight: 100;
+}
+.introname{
+    color: yellow;
+}
+.intropera{
+    font-size: medium;
+    font-weight: 300;
+}
+.social{
+    width: 3rem;
+    height: 3rem;
+    display: flexbox;
+    border-radius: 7rem;
+    margin-top: 1.5rem;
+    margin: .5rem;
+ }
+
+@media screen and (max-width: 1024px ) {
+
+    .text{
+        margin-top: 15rem;
+    }
+    .bg{
+        height: 70vh;
+        width: 40vh;
+    }
+}
+@media screen and (max-width: 280px ){
+    .bg{
+        margin-left: 10rem;
+    }
+}

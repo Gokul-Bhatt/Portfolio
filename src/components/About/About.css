@@ -1,0 +1,57 @@
+.about{
+    height:auto;
+    width: auto;
+    margin-top: 5rem;
+    display: flex;
+    max-width: 75rem;
+    justify-content: center;
+  
+}
+.abouttext{
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.head{
+    font-size: larger;
+    font-weight: 700;
+}
+.aboutpera{
+    margin-top: 1rem;
+    font-size: 1.7rem;
+}
+.Adp{
+    width: 25rem;
+    height: 30rem;
+}
+@media screen and (max-width: 500px) {
+    .about{
+      flex-wrap: wrap;
+      margin-top: -5rem;
+     overflow: hidden;
+     max-width: 23rem;
+     margin-left: 1.5rem;
+    }
+    
+}
+@media screen and (max-width: 280px){
+        .about{
+            margin-top: 2rem;
+            max-width: 18rem;
+        }
+        .Abp{
+            width: 20rem;
+            height: 10rem;
+        }
+        .abname{
+            font-size: 2rem;
+        }
+        .do{
+            font-size: 1.9rem;
+        }
+        .aboutpera{
+            font-size: 1.5rem;
+        }
+}
