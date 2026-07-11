@@ -1,0 +1,286 @@
+/*==========================
+SKILLS SECTION
+==========================*/
+
+.skills-section{
+    width:100%;
+    min-height:100vh;
+    padding:90px 8%;
+    background:#050816;
+    position:relative;
+    overflow:hidden;
+}
+
+/*==========================
+HEADING
+==========================*/
+
+.skills-heading{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+/*==========================
+CATEGORY CONTAINER
+==========================*/
+
+.category-container{
+    display:flex;
+    flex-direction:column;
+    gap:45px;
+}
+
+.category-card{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    border-radius:30px;
+    padding:35px;
+    transition:.4s;
+}
+
+.category-card:hover{
+    border-color:#00F5FF;
+    box-shadow:0 15px 40px rgba(0,245,255,.15);
+}
+
+.category-title{
+    font-size:28px;
+    color:#00F5FF;
+    margin-bottom:30px;
+    font-weight:700;
+    position:relative;
+}
+
+.category-title::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:70px;
+    height:4px;
+    border-radius:20px;
+    background:linear-gradient(90deg,#00F5FF,#8B5CF6);
+}
+
+.skills-heading h2{
+
+    font-size:3rem;
+
+    color:white;
+
+    font-weight:700;
+
+}
+
+.skills-heading h2 span{
+
+    background:linear-gradient(90deg,#00F5FF,#8B5CF6);
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+}
+
+.skills-heading p{
+
+    margin-top:15px;
+
+    color:#94A3B8;
+
+    font-size:18px;
+
+}
+
+/*==========================
+GRID
+==========================*/
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:20px;
+}
+
+/*==========================
+CARD
+==========================*/
+
+.skill-card{
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:25px 15px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    transition:.4s;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    min-height:180px;
+}
+
+/* Glow */
+
+.skill-card::before{
+
+content:"";
+
+position:absolute;
+
+width:220px;
+
+height:220px;
+
+background:
+
+linear-gradient(
+135deg,
+#00F5FF,
+#8B5CF6);
+
+border-radius:50%;
+
+filter:blur(80px);
+
+opacity:0;
+
+transition:.5s;
+
+}
+
+.skill-card:hover::before{
+
+opacity:.22;
+
+}
+
+.skill-card:hover{
+
+transform:
+
+translateY(-12px)
+
+scale(1.04);
+
+border-color:#00F5FF;
+
+box-shadow:
+
+0 20px 50px rgba(0,245,255,.18);
+
+}
+
+/*==========================
+ICON
+==========================*/
+
+.skill-icon{
+    width:80px;
+    height:80px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.skill-icon img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+    transition:.4s;
+}
+
+.skill-card:hover img{
+    transform:scale(1.15) rotate(5deg);
+}
+
+/*==========================
+TITLE
+==========================*/
+
+.skill-card h3{
+    color:white;
+    font-size:18px;
+    text-align:center;
+    margin-top:10px;
+    font-weight:600;
+}
+
+/*==========================
+RESPONSIVE
+==========================*/
+@media(max-width:992px){
+
+.category-card{
+    padding:30px;
+}
+
+.skills-grid{
+    grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+}
+
+}
+
+@media(max-width:768px){
+
+.skills-section{
+    padding:80px 20px;
+}
+
+.skills-heading h2{
+    font-size:2.3rem;
+}
+
+.skills-heading p{
+    font-size:16px;
+}
+
+.category-card{
+    padding:25px;
+}
+
+.category-title{
+    font-size:24px;
+}
+
+.skills-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.skill-card{
+    min-height:160px;
+}
+
+.skill-icon img{
+    width:50px;
+    height:50px;
+}
+
+}
+
+@media(max-width:480px){
+
+.skills-grid{
+    grid-template-columns:repseat(2,1fr);
+}
+
+.category-card{
+    padding:18px;
+}
+
+.category-title{
+    text-align:center;
+}
+
+.category-title::after{
+    left:50%;
+    transform:translateX(-50%);
+}
+
+}
