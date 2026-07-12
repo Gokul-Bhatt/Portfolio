@@ -13,7 +13,7 @@ const Nav = () => {
       <Link activeClass='active' to='home'  spy={true} smooth={true} offset={-100} duration={500} className='menuitem'>Home</Link>
       <Link activeClass='active' to='about'  spy={true} smooth={true} offset={-100} duration={500} className='menuitem'>About</Link>
       <Link activeClass='active' to='skills'  spy={true} smooth={true} offset={-100} duration={500} className='menuitem'>Skills</Link>
-     <Link activeClass='active' to='work'  spy={true} smooth={true} offset={-100} duration={500} className='menuitem'>Work</Link> 
+     <Link activeClass='active' to='projects'  spy={true} smooth={true} offset={-100} duration={500} className='menuitem'>Work</Link> 
      <Link activeClass='active' to='contact'  spy={true} smooth={true} offset={-100} duration={500} className='menuitem'>Contact</Link> 
     </div>
     <img src={menu} alt="menu" className='mobmenu' onClick={()=>setShowMenu(!showMenu)}/>
@@ -21,7 +21,7 @@ const Nav = () => {
       <Link activeClass='active' to='home'  spy={true} smooth={true} offset={-100} duration={500} className='mobmenuitem'onClick={()=>setShowMenu(false)}>Home</Link>
       <Link activeClass='active' to='about'  spy={true} smooth={true} offset={-100} duration={500} className='mobmenuitem'onClick={()=>setShowMenu(false)}>About</Link>
       <Link activeClass='active' to='skills'  spy={true} smooth={true} offset={-100} duration={500} className='mobmenuitem'onClick={()=>setShowMenu(false)}>Skills</Link>
-     <Link activeClass='active' to='work'  spy={true} smooth={true} offset={-100} duration={500} className='mobmenuitem'onClick={()=>setShowMenu(false)}>Work</Link> 
+     <Link activeClass='active' to='projects'  spy={true} smooth={true} offset={-100} duration={500} className='mobmenuitem'onClick={()=>setShowMenu(false)}>Work</Link> 
      <Link activeClass='active' to='contact'  spy={true} smooth={true} offset={-100} duration={500} className='mobmenuitem'onClick={()=>setShowMenu(false)}>Contact</Link> 
     </div>
    </section>

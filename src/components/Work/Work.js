@@ -2,80 +2,180 @@ import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import "./Work.css";
 
-const Work = () => {
-  const projects = [
-    {
-      id: 1,
-      title: "Hotel Booking",
-      description: "A MERN stack hotel booking application.",
-      image: "https://picsum.photos/700/500?random=1",
-    },
-    {
-      id: 2,
-      title: "Weather App",
-      description: "Live weather forecast using OpenWeather API.",
-      image: "https://picsum.photos/700/500?random=2",
-    },
-    {
-      id: 3,
-      title: "Chat Application",
-      description: "Realtime messaging using Socket.io.",
-      image: "https://picsum.photos/700/500?random=3",
-    },
-    {
-      id: 4,
-      title: "Task Manager",
-      description: "Manage daily tasks with authentication.",
-      image: "https://picsum.photos/700/500?random=4",
-    },
-    {
-      id: 5,
-      title: "Portfolio",
-      description: "Responsive portfolio built with React.",
-      image: "https://picsum.photos/700/500?random=5",
-    },
-  ];
+const projects = [
+  {
+    id: 1,
+    title: "Hotel Booking",
+    description:
+      "A MERN stack hotel booking application with authentication, booking system and admin dashboard.",
+    image: "https://picsum.photos/900/600?random=1",
+    tech: ["React", "Node", "MongoDB", "Express"],
+    github: "#",
+    demo: "#",
+  },
+  {
+    id: 2,
+    title: "Weather App",
+    description:
+      "Live weather forecasting using OpenWeather API with beautiful UI.",
+    image: "https://picsum.photos/900/600?random=2",
+    tech: ["React", "API", "CSS"],
+    github: "#",
+    demo: "#",
+  },
+  {
+    id: 3,
+    title: "Chat Application",
+    description:
+      "Realtime chat application using Socket.io and Express.",
+    image: "https://picsum.photos/900/600?random=3",
+    tech: ["Socket.io", "Node", "MongoDB"],
+    github: "#",
+    demo: "#",
+  },
+  {
+    id: 4,
+    title: "Task Manager",
+    description:
+      "Manage your daily tasks with login and CRUD functionality.",
+    image: "https://picsum.photos/900/600?random=4",
+    tech: ["React", "Node", "JWT"],
+    github: "#",
+    demo: "#",
+  },
+  {
+    id: 5,
+    title: "Portfolio",
+    description:
+      "Modern responsive developer portfolio built using React.",
+    image: "https://picsum.photos/900/600?random=5",
+    tech: ["React", "CSS"],
+    github: "#",
+    demo: "#",
+  },
+];
 
+const Work = () => {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % projects.length);
-    }, 5000);
-
+    const timer = setInterval(nextProject, 5000);
     return () => clearInterval(timer);
-  }, [projects.length]);
+  }, [current]);
+
+  const nextProject = () => {
+    setCurrent((prev) => (prev + 1) % projects.length);
+  };
+
+  const prevProject = () => {
+    setCurrent((prev) =>
+      prev === 0 ? projects.length - 1 : prev - 1
+    );
+  };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-5 bg-[#050816] work" >
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={projects[current].id}
-          initial={{ opacity: 0, x: 150, scale: 0.9 }}
-          animate={{ opacity: 1, x: 0, scale: 1 }}
-          exit={{ opacity: 0, x: -150, scale: 0.9 }}
-          transition={{ duration: 0.6 }}
-          whileHover={{ scale: 1.03 }}
-          className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl rounded-3xl overflow-hidden bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl shadow-cyan-500/20"
-        >
-        
-          <img
-            src={projects[current].image}
-            alt={projects[current].title}
-            className="img"
-          />
-          
-          <div className="p-5 sm:p-6 md:p-8">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white tit">
-              {projects[current].title}
-            </h2>
+    <section className="work-section" id="projects">
 
-            <p className="mt-3 text-sm sm:text-base text-gray-300 leading-relaxed desc">
-              {projects[current].description}
-            </p>
-          </div>
-        </motion.div>
-      </AnimatePresence>
+      <div className="work-heading">
+
+        <h2>
+          Featured <span>Projects</span>
+        </h2>
+
+        <p>
+          Some of my recent work built using modern technologies.
+        </p>
+
+      </div>
+
+      <div className="slider-container">
+
+        <button className="arrow left" onClick={prevProject}>
+          ❮
+        </button>
+
+        <AnimatePresence mode="wait">
+
+          <motion.div
+            key={projects[current].id}
+            initial={{ opacity: 0, x: 120 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -120 }}
+            transition={{ duration: .5 }}
+            className="project-card"
+          >
+
+            <img
+              src={projects[current].image}
+              alt={projects[current].title}
+              className="project-image"
+            />
+
+            <div className="project-content">
+
+              <span className="project-count">
+                {String(current + 1).padStart(2, "0")}
+                /05
+              </span>
+
+              <h3>{projects[current].title}</h3>
+
+              <p>{projects[current].description}</p>
+
+              <div className="tech-list">
+
+                {projects[current].tech.map((item, index) => (
+                  <span key={index}>{item}</span>
+                ))}
+
+              </div>
+
+              <div className="project-buttons">
+
+                <a
+                  href={projects[current].github}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
+
+                <a
+                  href={projects[current].demo}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Live Demo
+                </a>
+
+              </div>
+
+            </div>
+
+          </motion.div>
+
+        </AnimatePresence>
+
+        <button className="arrow right" onClick={nextProject}>
+          ❯
+        </button>
+
+      </div>
+
+      <div className="dots">
+
+        {projects.map((_, index) => (
+
+          <span
+            key={index}
+            className={current === index ? "active-dot" : ""}
+            onClick={() => setCurrent(index)}
+          />
+
+        ))}
+
+      </div>
+
     </section>
   );
 };
