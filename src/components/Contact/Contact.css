@@ -1,68 +1,385 @@
-.contactpage{
-    min-height: calc(100vh - 4rem);
-    width: 100vw;
-    max-width: 60rem;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* margin-top: 15rem; */
-}
-.contactdecs{
-    margin-top: 5rem;
-    padding: 1rem;
-    font-size: large;
-    font-weight: 300;
-}
-.contactpageTitle{
-    font-size: 2.5rem;
+/*=========================================
+CONTACT SECTION
+=========================================*/
+
+.contact-section{
+    width:100%;
+    min-height:100vh;
+    padding:90px 8%;
+    background:#050816;
+    position:relative;
+    overflow:hidden;
 }
 
-.contactForm{
-    margin: 1rem ;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 90vw;
-    max-width: 60rem;
+/*=========================================
+HEADING
+=========================================*/
+
+.contact-heading{
+    text-align:center;
+    margin-bottom:70px;
 }
-#info{
-    font-size: medium;
-    width: 100%;
-    max-width: 40rem;
-    margin: 0.5rem;
-    padding: 0.5rem 1rem;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    background-color: rgb(40,40,40);
+
+.contact-heading h2{
+    font-size:3rem;
+    color:#fff;
+    font-weight:700;
 }
-.submitbtn{
-    background: yellow;
-    color: black;
-    border: none;
-    width: 10rem;
-    padding: 1rem;
-    border-radius: 0.7rem;
-    margin: 2rem;
-    font-size: large;
-    font-weight: 600;
-    transition: 0.4s;
+
+.contact-heading h2 span{
+    background:linear-gradient(90deg,#00F5FF,#8B5CF6);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
-.submitbtn:hover{
-    background: green;
-    color: white;
+
+.contact-heading p{
+    margin-top:15px;
+    color:#94A3B8;
+    font-size:18px;
+    max-width:650px;
+    margin-inline:auto;
 }
-.links{
-    display: flex;
-    flex-wrap: wrap;
+
+/*=========================================
+CONTAINER
+=========================================*/
+
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:50px;
+    align-items:start;
 }
-.link{
-    object-fit: cover;
-    height: 3rem;
-    width: 3rem;
-    margin: 0 0.75rem;
+
+/*=========================================
+LEFT CARD
+=========================================*/
+
+.contact-info{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(25px);
+
+    border-radius:30px;
+
+    padding:40px;
+
+    box-shadow:0 10px 40px rgba(0,245,255,.08);
+
+}
+
+.contact-info h3{
+
+    font-size:30px;
+
+    color:white;
+
+    margin-bottom:30px;
+
+}
+
+/*=========================================
+INFO CARD
+=========================================*/
+
+.info-card{
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:18px;
+
+    margin-bottom:20px;
+
+    transition:.35s;
+
+}
+
+.info-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#00F5FF;
+
+}
+
+.info-card h4{
+
+    color:#00F5FF;
+
+    font-size:18px;
+
+    margin-bottom:8px;
+
+}
+
+.info-card p{
+
+    color:#CBD5E1;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+/*=========================================
+SOCIALS
+=========================================*/
+
+.socials{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:30px;
+
+}
+
+.socials a{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.04);
+
+    transition:.35s;
+
+}
+
+.socials a:hover{
+
+    background:linear-gradient(90deg,#00F5FF,#8B5CF6);
+
+    transform:translateY(-4px);
+
+}
+
+/*=========================================
+FORM
+=========================================*/
+
+.contact-form{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(25px);
+
+    border-radius:30px;
+
+    padding:40px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+    box-shadow:0 10px 40px rgba(139,92,246,.08);
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    width:100%;
+
+    padding:18px 22px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,.05);
+
+    color:white;
+
+    font-size:16px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.3s;
+
+}
+
+.contact-form textarea{
+
+    resize:none;
+
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+
+    color:#94A3B8;
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+    border-color:#00F5FF;
+
+    box-shadow:0 0 15px rgba(0,245,255,.25);
+
+}
+
+/*=========================================
+BUTTON
+=========================================*/
+
+.contact-form button{
+
+    margin-top:10px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:linear-gradient(90deg,#00F5FF,#8B5CF6);
+
+    transition:.35s;
+
+    box-shadow:0 10px 30px rgba(139,92,246,.3);
+
+}
+
+.contact-form button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 40px rgba(0,245,255,.35);
+
+}
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:1000px){
+
+.contact-container{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.contact-section{
+
+padding:80px 20px;
+
+}
+
+.contact-heading h2{
+
+font-size:2.3rem;
+
+}
+
+.contact-heading p{
+
+font-size:16px;
+
+}
+
+.contact-info,
+.contact-form{
+
+padding:25px;
+
+}
+
+.socials{
+
+justify-content:center;
+
+}
+
+.socials a{
+
+flex:1;
+
+text-align:center;
+
+min-width:120px;
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+padding:15px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.contact-heading h2{
+
+font-size:2rem;
+
+}
+
+.contact-info h3{
+
+font-size:24px;
+
+}
+
+.socials{
+
+flex-direction:column;
+
+}
+
+.socials a{
+
+width:100%;
+
+}
+
+.contact-form button{
+
+font-size:16px;
+
+padding:16px;
+
+}
+
 }
