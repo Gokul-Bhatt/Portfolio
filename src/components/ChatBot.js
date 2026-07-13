@@ -10,7 +10,7 @@ const ChatBot = () => {
   const [messages, setMessages] = useState([
     {
       sender: "bot",
-      text: "👋 Hi! I'm Gokul's AI Assistant.\n\nAsk me anything about Gokul, his skills, education, projects or contact.",
+      text: "👋 Hi! I'm Gokul's AI Assistant.\n\nAsk me anything about Gokul, his skills, education, projects,work and expreince or contact.",
     },
   ]);
 
