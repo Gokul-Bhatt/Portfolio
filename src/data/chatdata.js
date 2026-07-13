@@ -15,6 +15,10 @@ const chatData = [
     keywords: ["projects", "project"],
     answer: "I've built Hotel Booking, Weather App, Portfolio, Task Manager and Chat App.",
   },
+  {
+    keywords: ["work"],
+    answer: "I've built Hotel Booking, Weather App, Portfolio, Task Manager and Chat App.",
+  }
  
 ];
 
