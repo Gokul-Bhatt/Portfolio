@@ -1,6 +1,7 @@
 import React from "react";
 import "./About.css";
-import dp from "../../assets/abprofile.png";
+// import dp from "../../assets/abprofile.png";
+import dp from "../../assets/abdp.jpeg";
 
 const About = () => {
   return (

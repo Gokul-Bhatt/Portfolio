@@ -1,6 +1,7 @@
 import React from "react";
 import "./NewCss.css";
-import profile from "../../assets/profile.png";
+// import profile from "../../assets/profile.png";
+import profile from "../../assets/gokul pp.jpg";
 import ChatBot from "../ChatBot";
 
 const Home = () => {
